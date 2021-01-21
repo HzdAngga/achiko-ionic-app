@@ -1,0 +1,72 @@
+.form {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 35px;
+  margin-top: 100px;
+  border: solid 1px;
+  border-radius: 30px;
+  background-color: black;
+  -webkit-animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715)
+    both;
+  animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+}
+
+.input {
+  width: 90%;
+  margin: 20px;
+  border: solid 2px;
+  border-radius: 20px;
+  border-color: blue;
+}
+
+.input:hover {
+  border-color: lightgreen;
+  padding: 20px;
+  width: 120%;
+  margin-left: -20px;
+}
+
+.button {
+  width: 50%;
+  margin-left: 70px;
+}
+
+.title {
+  font-size: 30px;
+}
+
+@-webkit-keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
