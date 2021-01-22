@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Splash from './pages/Splash';
@@ -26,16 +26,18 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route path="/" component={Splash} exact={true} />
-        <Route path="/main" component={Main} exact={true} />
-        <Route path="/home" component={Home} exact={true} />
-      </IonRouterOutlet>
-    </IonReactRouter>
+const App: React.FC = () => {
+  return (
+    <IonApp>
+      <IonReactRouter>
+        <IonRouterOutlet>
+          <Route path="/" component={Splash} exact={true} />
+          <Route path="/main" component={Main} exact={true} />
+          <Route path="/home" component={Home} exact={true} />          
+        </IonRouterOutlet>
+      </IonReactRouter>
     </IonApp>
-);
+  )
+};
 
 export default App;

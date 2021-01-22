@@ -6,7 +6,7 @@ import './Splash.css';
 const Splash: React.FC = () => {
   const history = useHistory()
   const onSwipe = () => {
-    history.push("/main");
+    history.replace("/main");
   }
 
 
